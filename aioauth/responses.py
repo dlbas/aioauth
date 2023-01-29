@@ -102,4 +102,4 @@ class Response:
 
     content: Dict = field(default_factory=dict)
     status_code: HTTPStatus = HTTPStatus.OK
-    headers: HTTPHeaderDict = default_headers
+    headers: HTTPHeaderDict = field(default_factory=default_headers.copy)
